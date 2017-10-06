@@ -15,11 +15,12 @@ const logDriversByHometown = (collection, location) => {
 }
 
 const driversByRevenue = (collection) => {
-  const newCollection = collection.sort(function(a, b) {
+  const newCollection = [...collection];
+  return newCollection.sort(function(a, b) {
     return a.revenue - b.revenue;
   });
-  return newCollection;
 }
+
 
 const driversByName = (collection) => {
   const newCollection = collection.sort(function(a, b) {
